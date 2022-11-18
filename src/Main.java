@@ -11,9 +11,9 @@ public class Main {
         }
         System.out.println();
 
-//        Задача 2
-        System.out.println("Задача 2");
-        int clientOS1 = 1;
+//        Задача 2 (вариант 1: без вложенных условных операторов)
+        System.out.println("Задача 2 (вариант 1)");
+        int clientOS1 = 0;
         int clientDeviceYear = 2014;
 
         if (clientOS1 == 0 && clientDeviceYear >= 2015) {
@@ -27,6 +27,25 @@ public class Main {
         }
         System.out.println();
 
+//        Задача 2 (вариант 2: с вложенными условными операторами)
+        System.out.println("Задача 2 (вариант 2)");
+
+        if (clientOS1 == 0) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println("Установите версию приложения для iOS по ссылке.");
+            } else {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+            }
+        } else {
+            if (clientDeviceYear >=2015) {
+                System.out.println("Установите версию приложения для Android по ссылке.");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке.");
+            }
+        }
+        System.out.println();
+
+
 //        Задача 3
         System.out.println("Задача 3");
         int year = 1900;
@@ -37,9 +56,10 @@ public class Main {
         }
         System.out.println();
 
+
 //        Задача 4
         System.out.println("Задача 4");
-        int deliveryDistance = 100;
+        int deliveryDistance = 40;
         int deliveryPeriod = 1;
 
         if (deliveryDistance < 20) {
@@ -49,8 +69,20 @@ public class Main {
         } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
             System.out.println("Доставка займет " + (deliveryPeriod + 1 + 1) + " дня.");
         } else {
-            System.out.println("Срок доставки неизвестен. Свяжитесь с оператором.");
+            System.out.println("Доставка не осуществляется.");
         }
+        System.out.println();
+
+//        Задача 4 (вариант наставника)
+        System.out.println("Задача 4 (вариант наставника)"); // нет ограничения 100 км и варианта, что доставка на определенное расстояние не осуществляется
+
+        if (deliveryDistance >= 20) {
+            deliveryPeriod ++;
+        }
+        if (deliveryDistance >= 60) {
+            deliveryPeriod ++;
+        }
+        System.out.println("Доставка займет дней: " + (deliveryPeriod) + ".");
         System.out.println();
 
 //        Задача 5
